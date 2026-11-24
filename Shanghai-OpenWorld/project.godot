@@ -1,0 +1,36 @@
+config_version=5
+
+[application]
+config/name="Shanghai Open World"
+config/description="魔都：自由都市"
+config/version="0.1.0"
+run/main_scene="res://game/main.tscn"
+config/icon="res://assets/textures/icon.png"
+boot_splash/image="res://assets/textures/splash.png"
+boot_splash/bg_color=Color(0.027, 0.085, 0.133, 1)
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=4
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+textures/vram_compression/import_etc2_astc=true
+
+[shader_globals]
+night={"type":"float","value":0.0}
+wetness={"type":"float","value":0.0}
+water_detail={"type":"float","value":1.0}
+
+[physics]
+common/max_physics_steps_per_frame=4
+
+[input_devices]
+pointing/emulate_mouse_from_touch=true
+sensors/enable_accelerometer=true
